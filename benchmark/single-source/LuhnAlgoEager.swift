@@ -130,7 +130,7 @@ func • <T, U, V> (g: @escaping (U) -> V, f: @escaping (T) -> U) -> (T) -> V {
 }
 
 // function to free a method from the shackles
-// of it's owner
+// of its owner
 func freeMemberFunc<T,U>(_ f: @escaping (T)->()->U)->(T)->U {
     return { (t: T)->U in f(t)() }
 }
